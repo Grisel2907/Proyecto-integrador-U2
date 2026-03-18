@@ -11,7 +11,7 @@ productos = [
 ]
 
 def main(page: ft.Page):
-    page.title      = "TechStore"
+    page.title      = "PixelShop"
     page.scroll     = "auto"
     page.bgcolor    = "#F0F2F8"
     page.padding    = 0
@@ -56,7 +56,7 @@ def main(page: ft.Page):
                 ft.Column(
                     spacing=2,
                     controls=[
-                        ft.Text("💻 TechStore", size=30, weight="bold", color="#2F3542"),
+                        ft.Text("💻 PixelShop", size=30, weight="bold", color="#2F3542"),
                         ft.Text("Catalogo de productos tecnologicos", size=13, color="#747D8C")
                     ]
                 ),
@@ -119,7 +119,7 @@ def main(page: ft.Page):
 
     footer = ft.Container(
         content=ft.Text(
-            "© 2026 TechStore · Proyecto Integrador Unidad 2",
+            "© 2026 PixelShop · Proyecto Integrador Unidad 2",
             size=12,
             color="#A4A8B0",
             text_align="center"
