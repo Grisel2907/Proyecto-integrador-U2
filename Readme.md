@@ -241,7 +241,49 @@ error_content=ft.Container(
 ```
 
 ---
+## Despliegue en Netlify
 
+### ¿Qué es Netlify?
+Netlify es una plataforma gratuita que permite publicar aplicaciones web en internet con solo arrastrar una carpeta.
+
+### ¿Cómo se preparó la app para web?
+
+Flet permite convertir una aplicación de escritorio en web usando el comando `flet publish`. Este comando genera una carpeta `dist/` con todos los archivos necesarios para el despliegue.
+
+Se ejecutó el siguiente comando en la terminal dentro de la carpeta del proyecto:
+```bash
+flet publish main.py
+```
+
+Esto generó automáticamente:
+- `dist/index.html` — página principal
+- `dist/manifest.json` — configuración de la app
+- `dist/version.json` — versión de Flet
+- `dist/app.tar.gz` — código comprimido de la app
+
+### Pasos para desplegar en Netlify:
+
+**Paso 1** — Entrar a [netlify.com](https://netlify.com) e iniciar sesión
+
+**Paso 2** — En el panel principal ir a:
+```
+Sites → Add new project → Deploy manually
+```
+
+**Paso 3** — Arrastrar la carpeta `dist/` generada por `flet publish` a la zona de deploy de Netlify
+
+**Paso 4** — Netlify procesa los archivos automáticamente y genera un link único:
+```
+https://nombre-aleatorio.netlify.app
+```
+
+**Paso 5** — Se puede personalizar el nombre del sitio desde:
+```
+Site configuration → Site details → Change site name
+```
+
+### Resultado:
+La app quedó disponible públicamente en internet sin necesidad de un servidor propio.
 
 ## 4.  Capturas de Pantalla
 
@@ -291,7 +333,7 @@ productos = conn.execute("SELECT * FROM productos").fetchall()
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 | Tecnología | Versión | Uso en el proyecto |
 |-----------|---------|-------------------|
@@ -303,7 +345,7 @@ productos = conn.execute("SELECT * FROM productos").fetchall()
 
 ---
 
-## 🚀 Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 
 ### Requisitos:
 - Python 3.x instalado
